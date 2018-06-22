@@ -1,1 +1,1 @@
-# mount_blue_3
+reading and making the project from javascript.info website
