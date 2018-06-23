@@ -1,4 +1,4 @@
-.delete{
+.delete {
     /*background: red;*/
     background: purple;
     padding: 6px;
@@ -7,10 +7,29 @@
     color: white;
 }
 
-.delete:hover{
+.delete:hover {
     background: #333;
 }
 
-.line-through{
+.line-through {
+    text-decoration: line-through;
+}
+
+li{
+	list-style: none;
+}
+.box-design{
+	border: 2px;
+	margin: 45px;
+}
+
+.name{
+	margin-right: 50px;
+}
+.delete{
+
+}
+
+#strike:checked + span{
 	text-decoration: line-through;
 }
