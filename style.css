@@ -7,6 +7,14 @@
     color: white;
 }
 
+.list-item{
+	display: flex;
+}
+
+.title{
+	text-align: center;
+}
+
 .delete:hover {
     background: #333;
 }
@@ -21,6 +29,7 @@ li{
 .box-design{
 	border: 2px;
 	margin: 45px;
+	display: flex;
 }
 
 .name{

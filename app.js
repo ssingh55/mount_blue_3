@@ -14,9 +14,8 @@ list.addEventListener('click', function(e) {
 const addForm = document.forms['add-item'];
 addForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    //get the value from input
+    //get the value from user input
     const value = addForm.querySelector('input[type="text"]').value;
-    // console.log(value);
 
     //create elemeents
     const li = document.createElement('li');
@@ -38,7 +37,7 @@ addForm.addEventListener('submit', function(e) {
     checkBox.id = 'strike';
     li.classList.add('box-design');
 
-    //append to document in order
+    //append to document by order
     li.appendChild(checkBox);
     li.appendChild(itemname);
     li.appendChild(deleteBtn);
