@@ -1,17 +1,17 @@
-// //variables
+//variables
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const button = document.querySelector('button');
 const input = document.getElementById('item');
 
 // //other variable
-let itemsArray = localStorage.getItem('items')?JSON.parse(localStorage.getItem('items')):[];
+let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 
 // localStorage.setItem('items', JSON.stringify(itemsArray));
-const data =JSON.parse(localStorage.getItem('items'));
+const data = JSON.parse(localStorage.getItem('items'));
 
 //creating a li tag
-const liMaker = (text) =>{
+const liMaker = (text) => {
     const li = document.createElement('li');
     li.textContent = text;
     ul.appendChild(li);
@@ -86,6 +86,7 @@ addForm.addEventListener('submit', function(e) {
     itemname.classList.add('name');
     deleteBtn.classList.add('delete');
     checkBox.id = 'strike';
+    checkBox.classList.add('strike');
     li.classList.add('box-design');
 
     //append to document by order
@@ -94,7 +95,7 @@ addForm.addEventListener('submit', function(e) {
     li.appendChild(deleteBtn);
     list.appendChild(li);
 
-    itemsArray.push(li);
+    itemsArray.push(item);
     localStorage.setItem('items', JSON.stringify(itemsArray));
     liMaker(input.value);
     input.value = "";
@@ -105,7 +106,7 @@ addForm.addEventListener('submit', function(e) {
 const strikeBox = document.querySelector("#strike");
 strikeBox.addEventListener('change', function(e) {
     if (strikeBox.checked) {
-        
+
     } else {
 
     }
@@ -113,7 +114,7 @@ strikeBox.addEventListener('change', function(e) {
 
 //display
 data.forEach(item => {
-  liMaker(item);
+    liMaker(item);
 });
 
 

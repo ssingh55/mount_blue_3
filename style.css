@@ -1,3 +1,7 @@
+body{
+	background: #6fb1fc;
+}
+
 .delete {
     /*background: red;*/
     background: purple;
@@ -48,6 +52,6 @@ li{
 
 }
 
-#strike:checked + span{
+.strike:checked + label{
 	text-decoration: line-through;
 }

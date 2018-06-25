@@ -1,4 +1,7 @@
 
+
+var num=1;
+
 //function  delete
 const list = document.querySelector('#list-item ul');
 
@@ -19,7 +22,7 @@ addForm.addEventListener('submit', function(e) {
 
     //create elemeents
     const li = document.createElement('li');
-    const itemname = document.createElement('span');
+    const itemname = document.createElement('label');
     const deleteBtn = document.createElement('span');
     const checkBox = document.createElement('input');
 
@@ -33,8 +36,10 @@ addForm.addEventListener('submit', function(e) {
 
     //adding the classes
     itemname.classList.add('name');
+    itemname.htmlFor = 'strike'+num;
     deleteBtn.classList.add('delete');
-    checkBox.id = 'strike';
+    checkBox.id = 'strike'+num;
+    checkBox.classList.add('strike');
     li.classList.add('box-design');
 
     //append to document by order
@@ -42,6 +47,8 @@ addForm.addEventListener('submit', function(e) {
     li.appendChild(itemname);
     li.appendChild(deleteBtn);
     list.appendChild(li);
+    // document.getElementById("add-item").textContent="";
+    num++;
 });
 
 
@@ -54,6 +61,20 @@ strikeBox.addEventListener('change', function(e) {
 
     }
 });
+
+
+//clear
+button.addEventListener('click',function(){
+    localStorage.clear();
+    while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+});
+
+
+
+
+//dragndrop
 
 
 
