@@ -11,7 +11,16 @@
 	display: flex;
 }
 
+.list-item div:nth-child(1) button{
+	background-color: red;
+}
+
 .title{
+	text-align: center;
+}
+
+
+#add-item{
 	text-align: center;
 }
 
