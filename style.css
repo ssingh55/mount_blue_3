@@ -40,16 +40,23 @@ li{
 	list-style: none;
 }
 .box-design{
-	border: 2px;
-	margin: 45px;
+	/*border: 2px;*/
+	margin: 0% 20%;
 	display: flex;
+	border: 1px solid #08a072;
+	justify-content: space-between;
+	background-color: #9bb2ab;
+}
+
+input[type="checkbox"]{
+	display: none;
 }
 
 .name{
 	margin-right: 50px;
 }
 .delete{
-
+	text-align: end;
 }
 
 .strike:checked + label{

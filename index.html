@@ -21,40 +21,31 @@
         <h3 class="title">ADDING ITEMS</h3>
         <div>
         <form action="" id="add-item">
-            <input type="text" name="" placeholder="add a item" id="item">
+            <input type="text" name="" placeholder="add a item" id="item" onfocus="this.value=''" required="">
             <button>ADD</button>
         </form>
         </div>
         <div>
             <h2></h2>
         <ul>
-            <li class="box-design" draggable="true">
+            <!-- <li class="box-design" draggable="true" ondragend="dragEnd()" ondragover="dragOver(event)" ondragstart="dragStart(event)">
                 <input type="checkbox"  id="strike1" class="strike">
-                <!-- <label for="strike"></label> -->
                 <label for="strike1" class="name">ITEM 1</label>
                 <span class="delete">x</span>
             </li>
-            <li class="box-design" draggable="true">
-            	<input type="checkbox" id="strike2" class="strike">
+            <li class="box-design" draggable="true" ondragend="dragEnd()" ondragover="dragOver(event)" ondragstart="dragStart(event)">
+                <input type="checkbox" id="strike2" class="strike">
                 <label for="strike2" class="name">ITEM 2</label>
                 <span class="delete">DELETE</span>
-            </li>
-            <!-- <li class="box-design">
-                <input type="checkbox" id="strike3" class="strike">
-                <label for="strike3" class="name">ITEM 1</label>
-                <span class="delete">x</span>
-            </li>
-            <li class="box-design">
-                <input type="checkbox" id="strike4" class="strike">
-                <label for="strike4" class="name">ITEM 2</label>
-                <span class="delete">DELETE</span>
             </li> -->
+        
+            
         </ul>
         <button>Clear all</button>
         </div>
 
     </div>
-    
+    <script src="dragdrop.js"></script>
     <script src="app.js"></script>
 </body>
 

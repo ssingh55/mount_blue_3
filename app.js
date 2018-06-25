@@ -9,6 +9,7 @@ list.addEventListener('click', function(e) {
     if (e.target.className == 'delete') {
         const li = e.target.parentElement;
         list.removeChild(li);
+        num--;
     }
 
 });
@@ -27,7 +28,7 @@ addForm.addEventListener('submit', function(e) {
     const checkBox = document.createElement('input');
 
     //add content
-    deleteBtn.textContent = 'DELETE';
+    deleteBtn.textContent = 'x';//'DELETE';
     itemname.textContent = value;
 
     //adding the attribute
@@ -35,6 +36,14 @@ addForm.addEventListener('submit', function(e) {
 
 
     //adding the classes
+    li.classList="box-design";
+    li.setAttribute('draggable', true);
+    li.setAttribute('draggable', true);
+    li.setAttribute('ondragned', "dragEnd()");
+    li.setAttribute('ondragover', "dragOver(event)");
+    li.setAttribute('ondragstart', "dragStart(event)");
+
+
     itemname.classList.add('name');
     itemname.htmlFor = 'strike'+num;
     deleteBtn.classList.add('delete');
