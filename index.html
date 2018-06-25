@@ -9,25 +9,19 @@
 </head>
 
 <body>
-    <!-- 	<input type="button" value="add" onclick="add()">
- -->
-    <!-- <input type="text" onclick="add()" id="add">
- 		<label for="add"><button>ADD</button></label> -->
-    <!-- <button>DELETE</button> -->
-
-
-
     <div id="list-item">
         <h3 class="title">ADDING ITEMS</h3>
         <div>
-        <form action="" id="add-item">
-            <input type="text" name="" placeholder="add a item" id="item" onfocus="this.value=''" required="">
+        <form action="" id="add-item" class="add-items">
+            <input type="text" name="item" placeholder="Item name" id="item" onfocus="this.value=''"  required="">
             <button>ADD</button>
+            <!-- <input type="submit" value="+ Add Item"> -->
         </form>
         </div>
         <div>
-            <h2></h2>
-        <ul>
+            <h2>Items</h2>
+            <p></p>
+        <ul class="plates">
             <!-- <li class="box-design" draggable="true" ondragend="dragEnd()" ondragover="dragOver(event)" ondragstart="dragStart(event)">
                 <input type="checkbox"  id="strike1" class="strike">
                 <label for="strike1" class="name">ITEM 1</label>
@@ -46,7 +40,9 @@
 
     </div>
     <script src="dragdrop.js"></script>
+    
     <script src="app.js"></script>
+    <script src="localStorage.js"></script>
 </body>
 
 </html>

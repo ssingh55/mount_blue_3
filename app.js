@@ -8,8 +8,21 @@ const list = document.querySelector('#list-item ul');
 list.addEventListener('click', function(e) {
     if (e.target.className == 'delete') {
         const li = e.target.parentElement;
+        console.log(li);
+        // console.log();
         list.removeChild(li);
         num--;
+       var itm = JSON.parse(localStorage.getItem("items"));
+        // console.log(itm);
+        for(var j=0;j<itm.length;j++){
+            if(itm[j].dindex==li.firstElementChild.id.substring(4))
+                {
+                    items.splice(j,1);
+                   break;
+               }
+                   
+        }
+        localStorage.setItem('items', JSON.stringify(items));
     }
 
 });
@@ -43,7 +56,6 @@ addForm.addEventListener('submit', function(e) {
     li.setAttribute('ondragover', "dragOver(event)");
     li.setAttribute('ondragstart', "dragStart(event)");
 
-
     itemname.classList.add('name');
     itemname.htmlFor = 'strike'+num;
     deleteBtn.classList.add('delete');
@@ -62,23 +74,23 @@ addForm.addEventListener('submit', function(e) {
 
 
 //line through
-const strikeBox = document.querySelector("#strike");
-strikeBox.addEventListener('change', function(e) {
-    if (strikeBox.checked) {
+// const strikeBox = document.querySelector("#strike");
+// strikeBox.addEventListener('change', function(e) {
+//     if (strikeBox.checked) {
     	
-    } else {
+//     } else {
 
-    }
-});
+//     }
+// });
 
 
 //clear
-button.addEventListener('click',function(){
-    localStorage.clear();
-    while (ul.firstChild) {
-        ul.removeChild(ul.firstChild);
-    }
-});
+// button.addEventListener('click',function(){
+//     localStorage.clear();
+//     while (ul.firstChild) {
+//         ul.removeChild(ul.firstChild);
+//     }
+// });
 
 
 

@@ -14,6 +14,9 @@ body{
 .list-item{
 	display: flex;
 }
+h2{
+	text-align: center;
+}
 
 .list-item div:nth-child(1) button{
 	background-color: red;

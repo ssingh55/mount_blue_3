@@ -3,7 +3,7 @@ var item;
 function dragOver(e) {
   //e.preventDefault();
   var mainTag;
-  if(e.target.tagName == 'SPAN'||e.target.tagName == 'LABEL'){
+  if(e.target.tagName == 'SPAN'||e.target.tagName == 'LABEL'||e.target.tagName == 'INPUT'){
     mainTag = e.target.parentNode;
   }
   else{
@@ -31,7 +31,6 @@ function dragStart(e) {
 }
 
 function isBefore(item1, item2) {
-
     if (item2.parentNode === item1.parentNode)
         for (var cur = item1.previousSibling; cur; cur = cur.previousSibling)
             if (cur === item2)
