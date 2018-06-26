@@ -13,5 +13,5 @@ function reindex() {
 		temp.push(obj);
 	}
 	console.log(temp);
-	itemList = temp;
+	items = temp;
 }

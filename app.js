@@ -1,6 +1,6 @@
 
 
-var num=1;
+// var num=1;
 
 //function  delete
 const list = document.querySelector('#list-item ul');
@@ -8,19 +8,18 @@ const list = document.querySelector('#list-item ul');
 list.addEventListener('click', function(e) {
     if (e.target.className == 'delete') {
         const li = e.target.parentElement;
-        console.log(li);
-        // console.log();
+        //console.log(li);
         list.removeChild(li);
-        num--;
-       var itm = JSON.parse(localStorage.getItem("items"));
+        // num--;
+       //var itm = JSON.parse(localStorage.getItem("items"));
         // console.log(itm);
-        for(var j=0;j<itm.length;j++){
+        for(var j=0;j<items.length;j++){
             //if(itm[j].dindex==li.firstElementChild.id.substring(4))
-            if(itm[j].indexid==li.firstElementChild.id)
+            if(items[j].indexid==li.firstElementChild.id)
                 {
                     // if(j!=itm.length-1)
                     //     items[j+1].dindex--;
-                    console.log(li.firstElementChild.id+" "+itm[j].indexid);
+                    console.log(li.firstElementChild.id+" "+items[j].indexid);
                     items.splice(j,1);
                     // k--;
                     // items.pop(j);
@@ -34,13 +33,15 @@ list.addEventListener('click', function(e) {
                }
                    
         }
+        //reindex();
         if(items.length==0) k=0;
         localStorage.setItem('items', JSON.stringify(items));
         bar();
     }
+    
 
 });
-
+/*
 //function add
 const addForm = document.forms['add-item'];
 addForm.addEventListener('submit', function(e) {
@@ -85,7 +86,7 @@ addForm.addEventListener('submit', function(e) {
     // document.getElementById("add-item").textContent="";
     num++;
 });
-
+*/
 
 //line through
 // const strikeBox = document.querySelector("#strike");

@@ -1,7 +1,8 @@
  var k=0;
  const addItems = document.querySelector('.add-items');
   const itemsList = document.querySelector('.plates');
-  const items = JSON.parse(localStorage.getItem('items')) || [];
+  //const items = JSON.parse(localStorage.getItem('items')) || [];
+  var items = JSON.parse(localStorage.getItem('items')) || [];
   function addItem(e) {
     e.preventDefault();
     const text = (this.querySelector('[name=item]')).value;
