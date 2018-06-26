@@ -1,0 +1,88 @@
+body {
+    background: #6fb1fc;
+}
+
+.list-item {
+    display: flex;
+}
+
+h2 {
+    text-align: center;
+}
+
+.list-item div:nth-child(1) button {
+    background-color: red;
+}
+
+.title {
+    text-align: center;
+}
+
+
+#add-item {
+    text-align: center;
+}
+
+.delete:hover {
+    background: #333;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+li {
+    list-style: none;
+}
+
+.box-design {
+    /*border: 2px;*/
+    margin: 0% 20%;
+    display: flex;
+    border: 1px solid #08a072;
+    justify-content: space-between;
+    background-color: #9bb2ab;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.box-design:focus {
+    box-shadow: 5px 10px red;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.name {
+    margin-right: 50px;
+}
+
+.delete {
+    /*text-align: end;*/
+    /*background: purple;*/
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+.strike:checked+label {
+    text-decoration: line-through;
+}
+
+#outside {
+    background-color: red;
+    
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#inside {
+    background-color: green;
+    width:0%;
+    height: 20px;
+}
