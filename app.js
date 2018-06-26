@@ -11,11 +11,12 @@ list.addEventListener('click', function(e) {
         //console.log(li);
         list.removeChild(li);
         // num--;
-       //var itm = JSON.parse(localStorage.getItem("items"));
+       //var itm = JSON.parse(localStorage.getItem("items"));//getting item from lS
         // console.log(itm);
-        for(var j=0;j<items.length;j++){
+        /*for(var j=0;j<items.length;j++){
             //if(itm[j].dindex==li.firstElementChild.id.substring(4))
-            if(items[j].indexid==li.firstElementChild.id)
+            console.log(li.firstElementChild.id+" ++ "+items[j].indexid);
+            if(items[j].indexid===li.firstElementChild.id)
                 {
                     // if(j!=itm.length-1)
                     //     items[j+1].dindex--;
@@ -32,13 +33,16 @@ list.addEventListener('click', function(e) {
                    break;
                }
                    
-        }
+        }*/
+
+        items.splice(e.target.parentNode.children[0].getAttribute("position"), 1);
+        populateList(items, itemsList);
+
         //reindex();
         if(items.length==0) k=0;
         localStorage.setItem('items', JSON.stringify(items));
         bar();
     }
-    
 
 });
 /*

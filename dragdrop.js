@@ -32,6 +32,7 @@ function dragEnd() {
     localStorage.clear();
     localStorage.setItem("items", JSON.stringify(items));
   }
+  populateList(items, itemsList);
 }
 
 function dragStart(e) {
