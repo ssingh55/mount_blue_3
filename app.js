@@ -20,6 +20,7 @@ list.addEventListener('click', function(e) {
                     // if(j!=itm.length-1)
                     //     items[j+1].dindex--;
                     items.splice(j,1);
+                    k--;
                     // items.pop(j);
                     // console.log(items);
                     // if(j==itm.length-1)
