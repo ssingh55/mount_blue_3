@@ -17,7 +17,16 @@ list.addEventListener('click', function(e) {
         for(var j=0;j<itm.length;j++){
             if(itm[j].dindex==li.firstElementChild.id.substring(4))
                 {
+                    // if(j!=itm.length-1)
+                    //     items[j+1].dindex--;
                     items.splice(j,1);
+                    // items.pop(j);
+                    // console.log(items);
+                    // if(j==itm.length-1)
+                    //     itm[j].dindex--;
+                    // else
+                    //     itm[j+1].dindex--;
+                    // console.log(itm[j+1].dindex);
                    break;
                }
                    
@@ -85,6 +94,7 @@ addForm.addEventListener('submit', function(e) {
 
 
 //clear
+// const button=document.getElementsByClassName('clear');
 // button.addEventListener('click',function(){
 //     localStorage.clear();
 //     while (ul.firstChild) {

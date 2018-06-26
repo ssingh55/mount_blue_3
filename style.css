@@ -2,15 +2,6 @@ body{
 	background: #6fb1fc;
 }
 
-.delete {
-    /*background: red;*/
-    background: purple;
-    padding: 6px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-}
-
 .list-item{
 	display: flex;
 }
@@ -49,6 +40,11 @@ li{
 	border: 1px solid #08a072;
 	justify-content: space-between;
 	background-color: #9bb2ab;
+	font-size: 20px;
+	font-weight: 500;
+}
+.box-design:focus{
+	box-shadow: 5px 10px red;
 }
 
 input[type="checkbox"]{
@@ -59,7 +55,13 @@ input[type="checkbox"]{
 	margin-right: 50px;
 }
 .delete{
-	text-align: end;
+	/*text-align: end;*/
+    /*background: purple;*/
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
 }
 
 .strike:checked + label{
