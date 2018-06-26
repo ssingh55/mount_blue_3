@@ -7,7 +7,8 @@
     const text = (this.querySelector('[name=item]')).value;
     var dindex=k;
     k+=1;
-    // var indexid = (this.querySelector('[name=item]')).id;
+    const indexid = 'item'+k;
+    console.log(indexid);
     const item = {
       text,
       done: false,

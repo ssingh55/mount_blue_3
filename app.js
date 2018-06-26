@@ -19,6 +19,7 @@ list.addEventListener('click', function(e) {
                 {
                     // if(j!=itm.length-1)
                     //     items[j+1].dindex--;
+                    console.log(li.firstElementChild.id+" "+itm[j].dindex);
                     items.splice(j,1);
                     k--;
                     // items.pop(j);
