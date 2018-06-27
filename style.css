@@ -1,4 +1,9 @@
+* {
+    font-size: 20px;
+}
+
 body {
+    margin-top: 40px;
     background: #6fb1fc;
 }
 
@@ -59,8 +64,6 @@ input[type="checkbox"] {
 }
 
 .delete {
-    /*text-align: end;*/
-    /*background: purple;*/
     padding: 6px;
     border-radius: 4px;
     cursor: pointer;
@@ -74,7 +77,7 @@ input[type="checkbox"] {
 
 #outside {
     background-color: red;
-    
+
     height: 20px;
     margin-top: 20px;
     margin-left: 10%;
@@ -83,6 +86,6 @@ input[type="checkbox"] {
 
 #inside {
     background-color: green;
-    width:0%;
+    width: 0%;
     height: 20px;
 }

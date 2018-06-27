@@ -1,7 +1,6 @@
 var item;
 
 function dragOver(e) {
-  //e.preventDefault();
   var mainTag;
   if(e.target.tagName == 'SPAN'||e.target.tagName == 'LABEL'||e.target.tagName == 'INPUT'){
     mainTag = e.target.parentNode;
@@ -19,7 +18,6 @@ function dragOver(e) {
 }
 
 function dragEnd() {
- // e.preventDefault();
   item = null;
 
   for(var i=1;i<=items.length;i++)
@@ -36,7 +34,6 @@ function dragEnd() {
 }
 
 function dragStart(e) {
-  //e.preventDefault();
   e.dataTransfer.effectAllowed = "move";
   e.dataTransfer.setData("text/plain", null);
   item = e.target;

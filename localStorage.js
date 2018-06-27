@@ -1,22 +1,18 @@
  var k = 0;
  const addItems = document.querySelector('.add-items');
  const itemsList = document.querySelector('.plates');
- //const items = JSON.parse(localStorage.getItem('items')) || [];
  var items = JSON.parse(localStorage.getItem('items')) || [];
 
  function addItem(e) {
      e.preventDefault();
      const text = (this.querySelector('[name=item]')).value;
      if (text == null) return;
-     //var dindex=k;
-     //k+=1;
      const indexid = 'item' + k;
      k++;
      console.log(indexid);
      const item = {
          text,
          done: false,
-         //dindex
          indexid
      };
      items.push(item);
@@ -45,7 +41,7 @@
 
 
  function toggleDone(e) {
-     if (!e.target.matches('input')) return; // skip this unless it's an input
+     if (!e.target.matches('input')) return;
      const el = e.target;
      const index = el.dataset.index;
      items[index].done = !items[index].done;
